@@ -1,0 +1,27 @@
+export const pets = [
+  {
+    "code" : "123",
+    "name" : "Terry",
+    "petType" : "cat",
+    "petAge" : 6,
+    "amountDays" : 3,
+    "amountDue" : 100,
+    "image" : "cat1.jpeg"
+  }, {
+    "code" : "1234",
+    "name" : "Don",
+    "petType" : "cat",
+    "petAge" : 4,
+    "amountDays" : 5,
+    "amountDue" : 175,
+    "image" : "cat2.jpeg"
+  }, {
+    "code" : "12345",
+    "name" : "Claire",
+    "petType" : "cat",
+    "petAge" : 1,
+    "amountDays" : 2,
+    "amountDue" : 80,
+    "image" : "cat3.jpeg"
+  }
+]

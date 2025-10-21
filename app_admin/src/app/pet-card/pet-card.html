@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">{{ pet.name }}</div>
+  <img src="assets/images/{{ pet.image }}" alt="pet thumbnail" class="card-img-top">
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{ pet.petType }}, {{ pet.petAge }} years old
+    </h6>
+    <p class="card-subtitle mt-3 mb-3 text-muted">
+      Amount of Days the Cat Will Stay: {{ pet.amountDays }}
+      Amount Due: {{ pet.amountDue|currency:'USD':'symbol'}}
+    </p>
+    <div>
+      <button (click)="editPet(pet)" class="btn btn-info">Edit Pet</button>
+    </div>
+  </div>
+</div>

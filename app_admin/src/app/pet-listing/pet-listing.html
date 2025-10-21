@@ -1,0 +1,10 @@
+<!-- <pre>{{pets | json}}</pre> -->
+<!-- Add a button for adding a pet -->
+<div>
+  <button (click)="addPet()" class="btn btn-info">Add Pet</button>
+</div>
+<div class = "row">
+  <div *ngFor="let pet of pets" class="col-md-4">
+    <app-pet-card [pet]="pet" class="card-deck mt-2"></app-pet-card>
+  </div>
+</div>
