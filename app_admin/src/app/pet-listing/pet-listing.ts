@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PetCard } from '../pet-card/pet-card';
 import { Pet } from '../models/pet';
-import { pets } from '../data/pets';
 import { PetData } from '../services/pet-data';
 import { Router } from '@angular/router';
+import { Authentication } from '../services/authentication';
 
 @Component({
   selector: 'app-pet-listing',
@@ -22,7 +22,7 @@ export class PetListing implements OnInit {
   // constructor to initialize petDataService
   constructor(
     private petData: PetData,
-    private router: Router) {
+    private router: Router, private authentication: Authentication) {
     console.log('pet-listing constructor');
   }
 
@@ -54,5 +54,9 @@ export class PetListing implements OnInit {
   ngOnInit(): void {
     console.log('ngOnInit');
     this.getStuff();
+  }
+
+  public isLoggedIn() {
+    return this.authentication.isLoggedIn();
   }
 }

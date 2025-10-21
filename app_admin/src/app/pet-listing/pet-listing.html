@@ -1,6 +1,6 @@
 <!-- <pre>{{pets | json}}</pre> -->
 <!-- Add a button for adding a pet -->
-<div>
+<div *ngIf="isLoggedIn()">
   <button (click)="addPet()" class="btn btn-info">Add Pet</button>
 </div>
 <div class = "row">
