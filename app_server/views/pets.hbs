@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Pet Website </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head>
+  <body>
+    <div id="background">
+		  <div id="page">
+			  {{> header }}
+        <div id="contents">
+          <div class="box">
+            <div>
+              <div class="body">
+                <h1>Pets</h1>
+                <ul id="pets">
+        {{#each petsData}}
+                    <li>
+                      <a href="/api/pets/{{this.code}}"><img src="images/{{this.image}}" alt="Image"></a>
+                      <h2><a href="/pets">{{this.name}}</a></h2>
+                      <p> Species: {{this.species}}</p>
+                      <p> Age: {{this.age}}</p>
+                      <p> Amount of Days to Stay: {{this.amountDays}}</p>
+                      <p> Amount Due: {{this.amountDue}}</p>
+                    </li>
+        {{/each}}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     {{> footer}}
+  </div>
+</body>
+</html>
