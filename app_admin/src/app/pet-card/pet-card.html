@@ -9,7 +9,7 @@
       Amount of Days the Cat Will Stay: {{ pet.amountDays }}
       Amount Due: {{ pet.amountDue|currency:'USD':'symbol'}}
     </p>
-    <div>
+    <div *ngIf="isLoggedIn()">
       <button (click)="editPet(pet)" class="btn btn-info">Edit Pet</button>
     </div>
   </div>

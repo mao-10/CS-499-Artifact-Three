@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { PetListing } from './pet-listing/pet-listing';
+import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PetListing],
+  imports: [CommonModule, RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
