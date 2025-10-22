@@ -2,6 +2,11 @@
 <div *ngIf="isLoggedIn()">
   <button (click)="addPet()" class="btn btn-info">Add Pet</button>
 </div>
+<div id="myBtnContainer">
+  <button class="btn-filter active" (click)="filterSelection('all')"> Show All</button>
+  <button class="btn-filter" (click)="filterSelection('cats')">Cats</button>
+  <button class="btn-filter" (click)="filterSelection('dogs')">Dogs</button>
+</div>
 <div class = "row">
   <div *ngFor="let pet of pets" class="col-md-4">
     <app-pet-card [pet]="pet" class="card-deck mt-2"></app-pet-card>
