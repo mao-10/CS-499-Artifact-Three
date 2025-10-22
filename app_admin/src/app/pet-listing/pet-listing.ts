@@ -112,6 +112,11 @@ export class PetListing implements OnInit {
     }
   }
 
+  public isCat(pet: any): boolean {
+    // if filter is set to cats, show cats only
+    return pet.petType == 'cat';
+  }
+
   // ngOnInit method that will call private method when component is initialized
   ngOnInit(): void {
     console.log('ngOnInit');
