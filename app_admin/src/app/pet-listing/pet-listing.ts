@@ -50,6 +50,68 @@ export class PetListing implements OnInit {
       }
     })
   }
+
+  // filter pets
+  public filterSelection(c: string): void {
+    // if filter is 'show all', show all pets
+    if (c == 'all') {
+      this.petData.getPets()
+      .subscribe({
+        next: (value: any) => {
+        this.pets = value;
+        if(value.length > 0) {
+          this.message = 'There are ' + value.length + ' pets available.';
+        }
+        else {
+          this.message = 'There were no pets retrieved from the database';
+        }
+        console.log(this.message);
+        },
+        error: (error: any) => {
+          console.log('Error: ' + error);
+        }
+      })
+    }
+    else if (c == 'cats') {
+      // if filter is set to cats, show cats only
+      this.petData.getPets()
+      .subscribe({
+        next: (value: any) => {
+          this.pets = value;
+          if (this.pets.length > 0) {
+            this.pets.forEach((pet) => {
+              if (pet.petType == 'cat') {
+                console.log(pet);
+              }
+            })
+          }
+        },
+        error: (error: any) => {
+          console.log('Error: ' + error);
+        }
+      })
+    }
+    else if (c == 'dogs') {
+      // if filter is set to dogs, show dogs only
+      this.petData.getPets()
+      .subscribe({
+        next: (value: any) => {
+          this.pets = value;
+          if (this.pets.length > 0) {
+            this.pets.forEach((pet) => {
+              if (pet.petType == 'dog') {
+                console.log(pet);
+              }
+            })
+          }
+        },
+        error: (error: any) => {
+          console.log('Error: ' + error);
+        }
+      })
+    }
+  }
+
   // ngOnInit method that will call private method when component is initialized
   ngOnInit(): void {
     console.log('ngOnInit');
