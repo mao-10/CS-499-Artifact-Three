@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #f1f1f1;
+  padding: 20px 10 px;
+}
+
+.navbar a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.navbar-end a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.navbar-right {
+  padding: 20px;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  font-weight: bold;
+}
